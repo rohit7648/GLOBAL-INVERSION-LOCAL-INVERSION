@@ -1,0 +1,13 @@
+ #copied
+ 
+ bool isIdealPermutation(vector<int>& A) {
+        if(A.size()<=1)
+            return true;
+        int m=-1;
+        for(int i=0;i<A.size()-2;i++){
+            m=max(m,A[i]);
+            if(m>A[i+2])
+                return false;
+        }
+        return true;
+    }
